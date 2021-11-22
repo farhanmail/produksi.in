@@ -1,6 +1,5 @@
-import Button from '@restart/ui/esm/Button';
 import React, { useState } from 'react';
-import { Col, Container, FloatingLabel, Form, Row, Table } from 'react-bootstrap';
+import { Col, Container, FloatingLabel, Form, Image, Row, Table, Button } from 'react-bootstrap';
 import "../styles/produksi.css";
 
 const BuatPermintaan = () => {
@@ -26,20 +25,17 @@ const BuatPermintaan = () => {
                     </div>
                   </div>
                 </div>
-                <div className="d-flex justify-content-end" style={{marginTop:'20px'}}>
-                  <input
-                    type="file"
-                    onChange={(event) => {
-                    setSelectedImage(event.target.files[0]);
-                    }}
-                  />
-                </div>
+                  <div className="d-flex justify-content-center">
+                    <div class="shadow-sm bg-body rounded">
+                      <Image style={{height:'150px', width:'150px'}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRUhB044J0H_pcVbEe0qxV9aHSqcTqmjtggQ&usqp=CAU" rounded />
+                    </div>
+                  </div>
                 <div>
                   <Row style={{marginTop:'20px'}}>
                   <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword">
                     <Form.Label column sm="4">
                       Pilih Produk
-                    </Form.Label>
+                    </Form.Label> 
                     <Col sm="7">
                       <Form.Select defaultValue="Pilih Produk...">
                         <option>Pilih Produk...</option>
@@ -99,37 +95,37 @@ const BuatPermintaan = () => {
             </div>
             <Table striped bordered hover>
               <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
+                <tr style={{textAlign:'center'}}>
+                  <th width='50'>#</th>
+                  <th width='350'>Material</th>
+                  <th width='250'>Tipe</th>
+                  <th width='150'>Stok</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                  <td style={{textAlign:'center'}}>1</td>
+                  <td>Resleting</td>
+                  <td>Pernik</td>
+                  <td style={{textAlign:'center'}}>2000</td>
                 </tr>
                 <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
+                  <td style={{textAlign:'center'}}>2</td>
+                  <td>Denim</td>
+                  <td>Kain</td>
+                  <td style={{textAlign:'center'}}>1000</td>
                 </tr>
                 <tr>
-                  <td>3</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
+                  <td style={{textAlign:'center'}}>3</td>
+                  <td>Lem</td>
+                  <td>Alat & Bahan</td>
+                  <td style={{textAlign:'center'}}>30</td>
                 </tr>
                 <tr>
-                  <td>4</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
+                  <td style={{textAlign:'center'}}>4</td>
+                  <td>Pengait</td>
+                  <td>Pernik</td>
+                  <td style={{textAlign:'center'}}>200</td>
                 </tr>
               </tbody>
             </Table>
